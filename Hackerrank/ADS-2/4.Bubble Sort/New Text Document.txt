@@ -1,0 +1,54 @@
+/*
+Bubble Sort Overview:
+
+Bubble sort is a stable, in place srting algorithm named for smaller or larger elements "bubble" to the top of the list. Although the algorithm is simple, it is too slow and impractical for most problems even comparred to insertion sort, and is not recommended for large input.
+
+Input Format
+
+Input: arr[] = { 3, 5, 8, 4, 1, 9, -2 };
+
+Constraints
+
+.
+
+Output Format
+
+Output:[-2,1,3,4,5,8,9]
+
+Sample Input 0
+
+3, 5, 8, 4, 1, 9, -2
+Sample Output 0
+
+[-2, 1, 3, 4, 5, 8, 9]
+*/
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+        void bubblesort(int a[])
+        {
+            int n=a.length;
+            for(int i=0;i<n;i++)
+            {
+                for(int j=0;j<n-i-1;j++)
+                {
+                    if(a[j]>a[j+1])
+                    {
+                        int temp=a[j];
+                        a[j]=a[j+1];
+                        a[j+1]=temp;
+                    }
+                }
+            
+            }
+            System.out.println(""+Arrays.toString(a));
+        }
+    public static void main(String[] args) {
+        Solution s1=new Solution();
+        int arr[]={3,5,8,4,1,9,-2};
+        s1.bubblesort(arr);
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
